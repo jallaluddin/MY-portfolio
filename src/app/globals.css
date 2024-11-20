@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    color: #fff;
+    background-color: #000000;
+  }
+}
+
+@layer components {
+  .menuLink {
+    @apply cursor-pointer hover:text-[#c5c5c5];
+  }
+
+  .tags {
+    @apply bg-[#0abde3] text-white rounded text-xs px-2 py-1 inline-block;
+  }
+
+  /* Add specific styles for the second, third, and fourth child tags */
+  .tags:nth-child(2) {
+    @apply bg-purple-500;
+  }
+
+  .tags:nth-child(3) {
+    @apply bg-orange-400;
+  }
+
+  .tags:nth-child(4) {
+    @apply bg-red-600;
+  }
+}
